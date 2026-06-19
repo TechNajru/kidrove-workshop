@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://kidrove-workshop-6dcq.onrender.com";
 
 const validate = ({ name, email, phone }) => {
   const errors = {};
@@ -31,10 +33,12 @@ export default function Registration() {
     setServerError('');
 
     try {
-      const res = await fetch(`${API_URL}/api/enquiry`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+      const res = await fetch(`${API_URL}/api/auth/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
       const data = await res.json();
       if (data.success) {
