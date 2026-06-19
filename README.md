@@ -2,81 +2,42 @@
 
 ## Project Structure
 ```
-workshop/
-├── client/          # React frontend (Vite)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Hero.jsx
-│   │   │   ├── Details.jsx
-│   │   │   ├── Outcomes.jsx
-│   │   │   ├── FAQ.jsx
-│   │   │   ├── Registration.jsx
-│   │   │   └── Footer.jsx
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── main.jsx
-│   └── package.json
-└── server/          # Express.js backend
-    ├── index.js
-    └── package.json
+├── client/          → React frontend (deploy on Vercel)
+└── server/          → Express backend (deploy on Render)
 ```
 
-## Quick Start
+## Local Setup
 
-### 1. Start the Backend
+### Backend
 ```bash
 cd server
 npm install
+# Create .env file:
+# MONGO_URI=mongodb+srv://najrudeenalam7:UmDOp6cVIKuYjMEW@cluster0.lpk8dzl.mongodb.net/kidrove?appName=Cluster0
+# PORT=5000
 npm start
-# Runs on http://localhost:5000
 ```
 
-### 2. Start the Frontend
+### Frontend
 ```bash
 cd client
 npm install
 npm run dev
-# Runs on http://localhost:5173
 ```
 
-## API
+## Deployment
 
-### POST /api/enquiry
-Registers a new workshop enquiry.
+### Render (Backend)
+- Root Directory: `server`
+- Build: `npm install`
+- Start: `node index.js`
+- Env Variable: `MONGO_URI` = your Atlas connection string
 
-**Request Body:**
-```json
-{
-  "name": "Riya Sharma",
-  "email": "parent@example.com",
-  "phone": "+91 98765 43210"
-}
-```
+### Vercel (Frontend)
+- Root Directory: `client`
+- Framework: Vite
+- Env Variable: `VITE_API_URL` = your Render URL
 
-**Success Response (201):**
-```json
-{
-  "success": true,
-  "message": "Thanks Riya Sharma! Your registration has been received...",
-  "id": 1718123456789
-}
-```
-
-**Validation Error (400):**
-```json
-{
-  "success": false,
-  "errors": ["Valid email is required."]
-}
-```
-
-### GET /api/enquiries
-Returns all submitted enquiries (admin use).
-
-## Evaluation Checklist
-- ✅ UI Design & Responsiveness — mobile-first, sticky nav, smooth scroll
-- ✅ React Component Structure — 7 modular components
-- ✅ Code Quality — clean JSX, prop-less where possible, semantic HTML
-- ✅ API Implementation — Express + validation + error handling
-- ✅ Attention to Detail — animations, hover states, accessible labels, loading state
+## API Endpoints
+- `POST /api/enquiry` — Submit registration
+- `GET /api/enquiries` — View all registrations

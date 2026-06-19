@@ -9,10 +9,11 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Segoe UI', system-ui, sans-serif; background: #F8FAFC; color: var(--dark); line-height: 1.6; }
 
 /* Navbar */
-.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; color: var(--blue); }
 .nav-links { display: flex; gap: 28px; font-size: .9rem; color: var(--mid); }
-.nav-links a { cursor: pointer; } .nav-links a:hover { color: var(--blue); }
+.nav-links a { cursor: pointer; transition: color .2s; }
+.nav-links a:hover { color: var(--blue); }
 .nav-btn { background: var(--blue); color: var(--white); padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: .88rem; cursor: pointer; border: none; transition: background .2s; }
 .nav-btn:hover { background: var(--blue-dark); }
 
@@ -40,8 +41,8 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: #F8FAFC; colo
 .section-sub { color: var(--muted); font-size: 1rem; max-width: 520px; margin-bottom: 48px; }
 
 /* Details */
-.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
-.detail-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 22px; transition: box-shadow .2s, transform .2s; cursor: default; }
+.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+.detail-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 22px; transition: box-shadow .2s, transform .2s; }
 .detail-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
 .detail-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 14px; }
 .detail-card .label { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; margin-bottom: 4px; }

@@ -1,10 +1,10 @@
 const OUTCOMES = [
-  { title: 'Understand AI Fundamentals',     desc: 'Grasp how ML models think, train, and predict real-world data.' },
-  { title: 'Build Your First Robot',          desc: 'Assemble and program a physical robot that reacts to sensors and commands.' },
-  { title: 'Code in Python & Scratch',        desc: 'Write clean working code using beginner-friendly tools and real Python syntax.' },
-  { title: 'Design Thinking & Problem Solving', desc: 'Apply structured thinking to break complex challenges into solvable steps.' },
-  { title: 'Collaborate on a Team Project',  desc: 'Present a final group project to peers, mentors, and parents at Demo Day.' },
-  { title: 'Earn a Digital Certificate',     desc: 'Receive a verified Kidrove completion certificate to showcase your skills.' },
+  { title: 'Understand AI Fundamentals',        desc: 'Grasp how ML models think, train, and predict real-world data.' },
+  { title: 'Build Your First Robot',             desc: 'Assemble and program a robot that reacts to sensors and commands.' },
+  { title: 'Code in Python & Scratch',           desc: 'Write clean working code using beginner-friendly tools and Python.' },
+  { title: 'Design Thinking & Problem Solving',  desc: 'Break complex challenges into solvable steps like an engineer.' },
+  { title: 'Collaborate on a Team Project',      desc: 'Present a final group project at Demo Day to peers and mentors.' },
+  { title: 'Earn a Digital Certificate',         desc: 'Receive a verified Kidrove certificate to showcase your skills.' },
 ];
 
 export default function Outcomes() {

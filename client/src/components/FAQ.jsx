@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const FAQS = [
-  { q: 'Does my child need prior coding experience?', a: 'No experience needed! This workshop is designed for absolute beginners. Our mentors start from the very basics and build up at a comfortable pace.' },
-  { q: 'What equipment or software is required?', a: 'A laptop or desktop with a stable internet connection is all you need. All software is free and web-based — no downloads required.' },
-  { q: 'How are live sessions structured?', a: 'Sessions run Monday–Friday, 10:00 AM–12:00 PM IST. Each class is 2 hours: 90 min of guided learning + 30 min hands-on project time. Recordings available for 7 days.' },
-  { q: 'Is there a refund policy?', a: 'Full refund within 48 hours of enrollment. 50% refund if requested before Week 2 begins. Post that, access to recordings remains available.' },
+  { q: 'Does my child need prior coding experience?',   a: 'No experience needed! This workshop is designed for absolute beginners. Our mentors start from the very basics.' },
+  { q: 'What equipment or software is required?',       a: 'A laptop with a stable internet connection is all you need. All software is free and web-based — no downloads required.' },
+  { q: 'How are live sessions structured?',             a: 'Sessions run Monday–Friday, 10:00 AM–12:00 PM IST. Each class is 2 hours: 90 min guided learning + 30 min project time.' },
+  { q: 'Is there a refund policy?',                     a: 'Full refund within 48 hours of enrollment. 50% refund before Week 2 begins. After that, recordings remain accessible.' },
 ];
 
 export default function FAQ() {
