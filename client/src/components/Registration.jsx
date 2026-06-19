@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const validate = ({ name, email, phone }) => {
   const errors = {};
@@ -70,9 +70,9 @@ export default function Registration() {
             {serverError && <div className="server-error">{serverError}</div>}
 
             {[
-              { name: 'name',  label: 'Full Name',       type: 'text',  placeholder: 'e.g. Riya Sharma' },
-              { name: 'email', label: 'Email Address',   type: 'email', placeholder: 'parent@example.com' },
-              { name: 'phone', label: 'Phone Number',    type: 'tel',   placeholder: '+91 98765 43210' },
+              { name: 'name', label: 'Full Name', type: 'text', placeholder: 'e.g. Riya Sharma' },
+              { name: 'email', label: 'Email Address', type: 'email', placeholder: 'parent@example.com' },
+              { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+91 98765 43210' },
             ].map(({ name, label, type, placeholder }) => (
               <div className="form-group" key={name}>
                 <label htmlFor={name}>{label}</label>
